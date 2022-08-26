@@ -1,0 +1,78 @@
+
+<!-- 111 -->
+
+{% extends 'main.html'%}
+{% load static %}
+{% block content %}
+
+
+<style>
+  .home-container{
+     display: grid;
+     grid-template-columns: 1fr 3fr 1fr;
+  }
+ </style>
+ {% for event in singEv %}
+
+<div class="home-container">
+
+  <div class="card" style="width: 25rem;">
+    {% csrf_token %}
+    <a href="{% url 'event' event.id %}">
+    <img src="{% static 'images/' %}{{event.featured_img}}" class="" width="400" height="222"/></a>
+      <div class="card-body">
+        <h5 class="card-title">{{event.title}}</h5>
+        
+        
+        {% for image in event.attachment %}
+        {{image}}
+          {% comment %} <img src="{% static 'images/' %}" class="" width="400" height="222"/> {% endcomment %}
+        {% endfor %}
+
+        event date:{{event.event_start_date}} - {{event.event_end_date}} <br>
+        event time:{{event.event_start_time}} - {{event.event_end_time}}<br><br>
+        <a href="#" class="btn btn-primary">Learn More</a>
+
+        <ul class="list-group list-group-flush">
+          Social Media
+          <li class="card-text">{{event.instagram}}</li>
+          <li class="card-text">{{event.twitter}}</li>
+          <li class="card-text">{{event.youtube}}</li>
+
+    
+        </ul>
+      </div>
+     
+      <div>
+      
+      </div>
+    </div>
+    <!-- <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div> -->
+
+  <div>
+    <p class="card-text">{{event.about}}</p>
+
+  </div>
+
+
+  <div>
+   <a href="{% url 'update-event' event.id %}">Edit</a>
+   {% if event.button_name == None %}
+   {% else %}  
+   <a href="{{event.external_link}}" target="_blank"><button>{{event.button_name}}</button></a>
+   {% endif %}
+   <!-- <button onclick="window.open('https://events.pes.edu/10537', '_blank')"  class="btn btn-success m-auto" type="button">
+    Confirm Attendance
+</button> -->
+  </div>
+
+
+</div>
+{% endfor %}
+{% endblock content %}

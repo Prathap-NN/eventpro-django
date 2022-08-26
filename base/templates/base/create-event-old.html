@@ -1,0 +1,418 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+
+
+<form  method="POST" action="" enctype="multipart/form-data">
+    {%csrf_token %}
+    {{form.as_p}}
+    <input type="hidden" name="_token" value="TPcyzIQgalhPgCd3j3kSO2RhBmNEPxm6jmJMJdhK">
+<div class="container mb-3">
+<div class="row">
+
+<!-- LHS -->
+<div class="col-md-2">
+    <div class="card tag-card p-3 mb-4">
+        <div class="card-head">
+            <p>Tag</p>
+        </div>
+        <div class="card-body required">
+                <div>
+                        <input type="checkbox" class="" id="tag1" name="tag[]" value="Alumni">
+                        <label class="" for="tag1">Alumni</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag2" name="tag[]" value="Clubs &amp; Activities">
+                        <label class="" for="tag2">Clubs &amp; Activities</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag3" name="tag[]" value="Music">
+                        <label class="" for="tag3">Music</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag4" name="tag[]" value="Sports">
+                        <label class="" for="tag4">Sports</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag5" name="tag[]" value="Research">
+                        <label class="" for="tag5">Research</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag6" name="tag[]" value="Workshop">
+                        <label class="" for="tag6">Workshop</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag7" name="tag[]" value="Dance">
+                        <label class="" for="tag7">Dance</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag8" name="tag[]" value="Cultural">
+                        <label class="" for="tag8">Cultural</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag9" name="tag[]" value="Technical">
+                        <label class="" for="tag9">Technical</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag10" name="tag[]" value="Conference">
+                        <label class="" for="tag10">Conference</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag11" name="tag[]" value="Art">
+                        <label class="" for="tag11">Art</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag12" name="tag[]" value="Management">
+                        <label class="" for="tag12">Management</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag13" name="tag[]" value="Innovation">
+                        <label class="" for="tag13">Innovation</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag14" name="tag[]" value="Academics">
+                        <label class="" for="tag14">Academics</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag15" name="tag[]" value="SocialActivities">
+                        <label class="" for="tag15">SocialActivities</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag16" name="tag[]" value="InfoSession">
+                        <label class="" for="tag16">InfoSession</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag17" name="tag[]" value="Admissions">
+                        <label class="" for="tag17">Admissions</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag18" name="tag[]" value="Media">
+                        <label class="" for="tag18">Media</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="" id="tag19" name="tag[]" value="Webinar">
+                        <label class="" for="tag19">Webinar</label>
+                </div>
+                <div>
+                        <input type="checkbox" class="" id="tag20" name="tag[]" value="Debate">
+                        <label class="" for="tag20">Debate</label>
+                </div>
+                <div>
+                        <input type="checkbox" class="" id="tag21" name="tag[]" value="Photography">
+                        <label class="" for="tag21">Photography</label>
+                </div>
+        <div>
+    </div>
+</div>
+</div>
+
+
+    
+</div>
+
+
+
+
+<!-- dfv -->
+<div class="col-md-6">
+<div class="card p-3 mb-4">
+    <div class="form-group row">
+        <div class="col-md-12">
+            <label>Title <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Maximum 191 Characters."></i></label>
+            <input type="text" class="form-control" id="title" name="title" required="">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-12">
+            <label>Sub - Title <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Maximum 191 Characters."></i></label>
+            <input type="text" class="form-control" id="description" name="description">
+        </div>
+    </div>
+    <!-- <input type="submit" value="submit"> -->
+    <div class="form-group row">
+        <div class="col-md-12">
+            <label>About <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Maximum 2000 Characters."></i></label>
+            <textarea class="form-control" name="about" rows="10"></textarea>
+        </div>
+    </div>
+</div>
+<div class="card p-3 mb-4">
+    <div class="row">
+                <label class="col-md-2 text-left col-form-label">Start/End</label>
+                <div class="col-md-10">
+                    <input type="date" class="form-control date-time-field mr-1" placeholder="dd-mm-yy" name="start_date">
+                    <input type="time" class="form-control date-time-field mr-1" id="start_time" name="start_time"><span class="mr-1"> to </span>
+                    <input type="date" class="form-control date-time-field mr-1" placeholder="dd-mm-yy" name="end_date">
+                    <input type="time" class="form-control date-time-field mr-1" id="end_time" name="end_time">
+                </div>
+    </div>
+</div>
+<div class="card p-3 mb-4">
+    <div class="row">
+                <label class="col-md-2 text-left col-form-label">Venue</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" name="address"></textarea>
+                    <div class="pt-2">
+                        <input type="checkbox" class="" id="is_online_event" name="is_online_event" value="Yes">
+                        <label class="" for="is_online_event">Online Event</label>
+                    </div>
+                </div>
+    </div>
+    <div class="row">
+        <label class="col-md-2 text-left col-form-label">Google Map</label>
+        <div class="col-md-4">
+            <input type="radio" class="" id="google_map1" name="google_map" value="Yes">
+                <label class="" for="google_map1">Yes</label>
+        </div>
+        <div class="col-md-4">
+            <input type="radio" class="" id="google_map1" name="google_map" value="No">
+            <label class="" for="google_map1">No</label>
+        </div>
+    </div>
+</div>
+
+ 
+
+<div class="card p-3 mb-4">
+    <div class="row mb-2">
+        <label for="external_link" class="col-md-2 text-left col-form-label">External Link  <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add Compelete URL for adding links like Resitration."></i></label>
+        <div class="col-md-10">
+            <input id="external_link" type="text" class="form-control" name="external_link">
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-md-3 text-left col-form-label">Choose a Button</label>
+        <div class="col-md-8">
+            <div class="row pt-3">
+                <div class="col-md-4">
+                    <input type="radio" class="" id="button_name1" name="button_name" value="Register">
+                    <label class="" for="button_name1">Register</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="radio" class="" id="button_name2" name="button_name" value="Confirm Attendance">
+                    <label class="" for="button_name2">Confirm Attendance</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="radio" class="" id="button_name3" name="button_name" value="Custom Text">
+                    <label class="" for="button_name3">Custom Text</label>
+                </div>
+            </div>
+        </div>
+    </div>            
+      <div class="row" id="custom_link" style="">
+        <label class="col-md-2 text-left col-form-label">Custom text  <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add Label for the External link."></i></label>
+        <div class="col-md-10">
+            <input id="custom_text" type="text" class="form-control" name="custom_text">
+        </div>
+    </div>
+</div>
+<div class="card p-3 mb-4">
+    <div class="row mb-2">
+                <label class="col-md-2 text-left col-form-label">Contact</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" name="contact"></textarea>
+                </div>
+    </div>
+    <div class="row">
+            <label for="email" class="col-md-2 text-md-left">E-Mail</label>
+            <div class="col-md-10 mb-2">
+                <input id="email" type="email" class="form-control" name="email" value="">
+                                        </div>
+        </div>
+</div>
+<div class="card p-3 mb-4">
+    <div class="card-head">
+        <p>Social Media / Website</p>
+    </div>
+    <div>
+        
+        <div class="row">
+                <label for="website" class="col-md-2 text-left col-form-label">Website</label>
+                <div class="col-md-10 mb-2">
+                    <input type="text" class="form-control" id="website" name="website">
+                </div>
+            </div>
+            <div class="row">
+                <label for="cono1" class="col-md-2 text-left col-form-label">FaceBook</label>
+                <div class="col-md-10 mb-2">
+                    <input type="text" class="form-control" id="facebook" name="facebook">
+                </div>
+            </div>
+            <div class="row">
+                <label for="cono1" class="col-md-2 text-left col-form-label">YouTube</label>
+                <div class="col-md-10 mb-2">
+                    <input type="text" class="form-control" id="youtube" name="youtube">
+                </div>
+            </div>
+            <div class="row">
+                <label for="cono1" class="col-md-2 text-left col-form-label">Instagram</label>
+                <div class="col-md-10 mb-2">
+                    <input type="text" class="form-control" id="instagram" name="instagram">
+                </div>
+            </div>
+            <div class="row">
+                <label for="cono1" class="col-md-2 text-left col-form-label">Twitter</label>
+                <div class="col-md-10 mb-2">
+                    <input type="text" class="form-control" id="twitter" name="twitter">
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+
+<!-- RHS -->
+
+<div class="col-md-4">  
+<div class="card mb-4">
+  
+    <div class="card-footer">
+        <button type="submit" value="submit">Publish</button>
+    </div>
+</div>
+<div class="card p-3 mb-4"> 
+    <div class="row">
+        <label class="col-md-2 text-left col-form-label">Gallery</label>
+        <div class="col-md-10">
+            <input id="gallery" type="file" class="form-control" name="images" multiple="multiple" style="display: none;">
+            <label for="gallery" class="btn btn-primary">Upload Images</label>
+            <div class="row" id="output" style="display: none;"><div class="col-md-12"></div></div>
+        </div> 
+
+      
+   
+    </div>
+</div>
+
+
+<div class="card p-3 mb-4" name="image">
+    <!-- <div class="card-head">
+        <p>Featured Image <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Upload cover photo here. Size: 400x222."></i></p>
+    </div> -->
+    <div>
+        <label class="col-md-2 text-left col-form-label">Featured Image</label>
+            <input id="profile_pic" type="file" class="featured_img" name="featured_img" multiple style="display: none;">
+            <label for="profile_pic" class="btn btn-primary">Upload Image</label>
+            <div class="row" id="fimg_output" style="display: none;"><div class="col-md-12"><img id="f_img" class="display-thumbnail"></div></div>
+             <!-- <script>
+                function loadFeaturedImage(event) {
+                   
+                    $("#fimg_output").css({"display": "block"});
+                    var image = document.getElementById('f_img');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>  -->
+    </div>
+</div>
+<div class="card p-3 mb-4">
+    <div class="row">
+        <label class="col-md-2 text-left col-form-label">PDF  <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="" data-original-title="Upload PDF's files only."></i></label>
+        <div class="col-md-10">
+            <input id="docs" type="file" class="form-control" name="docs[]" style="display: none;" accept="application/pdf">
+            <label for="docs" class="btn btn-primary">Upload PDF</label>
+        </div>
+    </div>
+</div>
+<div class="card p-3 mb-4">
+    <div class="card-head">
+        <p>Event Price</p>
+    </div>
+    <div>
+        <input type="text" class="form-control" id="event_price" name="event_price">
+    </div>
+</div>
+
+<div class="card department-card p-3 mb-4">
+    <div class="card-head">
+        <p>Department</p>
+    </div>
+    <div class="card-body">
+                <div>
+                    <input type="checkbox" class="" id="department1" name="department[]" value="Science &amp; Humanities">
+                    <label class="" for="department1">Science &amp; Humanities</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department2" name="department[]" value="Computer Science">
+                    <label class="" for="department2">Computer Science</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department3" name="department[]" value="Electronics &amp; Communications">
+                    <label class="" for="department3">Electronics &amp; Communications</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department4" name="department[]" value="Electrical &amp; Electronics">
+                    <label class="" for="department4">Electrical &amp; Electronics</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department5" name="department[]" value="Mechanical">
+                    <label class="" for="department5">Mechanical</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department6" name="department[]" value="Biotechnology">
+                    <label class="" for="department6">Biotechnology</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department7" name="department[]" value="Civil">
+                    <label class="" for="department7">Civil</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department8" name="department[]" value="Management Studies">
+                    <label class="" for="department8">Management Studies</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department9" name="department[]" value="Architecture">
+                    <label class="" for="department9">Architecture</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department10" name="department[]" value="Design">
+                    <label class="" for="department10">Design</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department11" name="department[]" value="Law">
+                    <label class="" for="department11">Law</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department12" name="department[]" value="Computer Applications">
+                    <label class="" for="department12">Computer Applications</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" class="" id="department13" name="department[]" value="Pharmacy">
+                    <label class="" for="department13">Pharmacy</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="" id="department14" name="department[]" value="Commerce">
+                    <label class="" for="department14">Commerce</label>
+                </div>
+    </div>
+</div>
+
+
+<div class="card campus-card p-3 mb-4">
+    <div class="card-head">
+        <p>Campus</p>
+    </div>
+    <div class="card-body">
+                <div>
+                    <input type="checkbox" class="" id="campus1" name="campus[]" value="PES University RR Campus">
+                    <label class="" for="campus1">PES University RR Campus</label>
+                </div>  
+                <div>
+                    <input type="checkbox" class="" id="campus2" name="campus[]" value="PES University EC Campus">
+                    <label class="" for="campus2">PES University EC Campus</label>
+                </div>  
+                <div>
+                    <input type="checkbox" class="" id="campus3" name="campus[]" value="PES University HN Campus">
+                    <label class="" for="campus3">PES University HN Campus</label>
+                </div>
+    </div>
+</div>
+
+   
+</div>
+</div>
+
+</div>
+</form>
+
+{% endblock content%}
